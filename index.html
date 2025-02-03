@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIDOU GAME</title>
+    <style>
+        /* إعدادات عامة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #121212;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* شاشة التحميل */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #loading-screen h1 {
+            font-size: 3rem;
+            color: #fff;
+            animation: fade 1.5s infinite;
+        }
+
+        @keyframes fade {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* واجهة الموقع */
+        .hero-section {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 4rem;
+            animation: slideDown 2s ease forwards;
+            color: #28a745;
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            animation: fadeIn 3s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* الأيقونات التعريفية */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 20px;
+        }
+
+        .features .feature {
+            text-align: center;
+            background: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+        }
+
+        .features .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #28a745;
+        }
+
+        /* صفحات الموقع */
+        .site-pages {
+            margin-top: 50px;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .site-pages h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #28a745;
+        }
+
+        .pages-links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .pages-links a:hover {
+            background: #1f7a34;
+        }
+
+        /* المتجر */
+        .store {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .store .category {
+            background: #1f1f1f;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .store .category:hover {
+            transform: translateY(-10px);
+        }
+
+        .store .category h3 {
+            margin-bottom: 15px;
+            color: #28a745;
+        }
+
+        .store .category a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .store .category a:hover {
+            background: #1f7a34;
+        }
+    </style>
+</head>
+<body>
+    <!-- شاشة التحميل -->
+    <div id="loading-screen">
+        <h1>SIDOU GAME</h1>
+    </div>
+
+    <!-- واجهة الموقع -->
+    <section class="hero-section">
+        <h1>SIDOU GAME</h1>
+        <p>The site for all game and technology lovers</p>
+    </section>
+
+    <!-- الأيقونات التعريفية -->
+    <section class="features">
+        <div class="feature">
+            <h3>الثقة</h3>
+            <p>نحن نضمن الثقة لعملائنا.</p>
+        </div>
+        <div class="feature">
+            <h3>الاحترافية</h3>
+            <p>نقدم خدمات بأعلى جودة.</p>
+        </div>
+        <div class="feature">
+            <h3>الشفافية</h3>
+            <p>لا أسرار، كل شيء واضح.</p>
+        </div>
+    </section>
+
+    <!-- صفحات الموقع -->
+    <section class="site-pages">
+        <h2>صفحات الموقع</h2>
+        <div class="pages-links">
+            <a href="#games">الألعاب</a>
+            <a href="#tech-news">الأخبار والتكنولوجيا</a>
+            <a href="#store">المتجر</a>
+        </div>
+    </section>
+
+    <!-- المتجر -->
+    <section id="store" class="store">
+        <div class="category">
+            <h3>متجر الإلكترونيات</h3>
+            <a href="#">عرض المنتجات</a>
+        </div>
+        <div class="category">
+            <h3>متجر البرمجيات</h3>
+            <a href="#">عرض المنتجات</a>
+        </div>
+        <div class="category">
+            <h3>متجر الخبرات</h3>
+            <a href="#">عرض المنتجات</a>
+        </div>
+    </section>
+
+    <script>
+        // تأخير عرض الموقع لإظهار شاشة التحميل
+        window.onload = () => {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 3000);
+        };
+    </script>
+</body>
+</html>
+    
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عداد الزوار</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .visitor-counter {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(48, 42, 42, 0.8);
+            color: rgb(44, 146, 31);
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="visitor-counter" id="visitorCounter">
+        الزوار: 0
+    </div>
+
+    <script>
+        // استعادة عدد الزوار من التخزين المحلي (LocalStorage)
+        let visitors = localStorage.getItem('visitorCount');
+
+        // إذا لم يكن هناك عدد مسجل، نبدأ من الصفر
+        if (!visitors) {
+            visitors = 0;
+        }
+
+        // زيادة العدد بمقدار 1 عند زيارة الصفحة
+        visitors++;
+
+        // تخزين العدد الجديد في LocalStorage
+        localStorage.setItem('visitorCount', visitors);
+
+        // عرض العدد في العداد
+        document.getElementById('visitorCounter').textContent = `الزوار: ${visitors}`;
+    </script>
+</body>
+</html>
